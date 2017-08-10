@@ -1,0 +1,31 @@
+p {
+    background-color: tomato;
+    /* color: #003366; */
+    /* color:#036; */
+    color: rgba(0, 51, 102,.85);
+    font: 16px 'Arial';
+}
+
+.ozelp{
+    font-size: 20px;
+    color:azure !important;
+}
+#giris{
+    color:cyan;
+}
+
+body > ul > li:nth-child(4) > ul > li:nth-child(2){
+    color:red;
+}
+
+div > h3{
+    background-color: red;
+    color:white;
+}
+
+body> ul> li:first-child{
+    color:red;
+}
+body> ul>li:last-child{
+    color:blue;
+}
