@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meyve sepeti</title>
+</head>
+
+<body>
+    <input type="text" id="txtmeyve" />
+    <input type="button" value="Ekle" onclick="sepeteekle()" /> <br/>
+    <label id="lblmesaj"></label>
+
+    <script>
+        var sepet = [];
+        function sepeteekle() {
+            var meyve = document.getElementById("txtmeyve").value;
+            if (sepet.length == 0) {
+                var yeniMeyve = {
+                    ad: meyve,
+                    adet: 1
+                };
+                sepet.push(yeniMeyve);
+            } else {
+                var varmi = false;
+                for (var i = 0; i < sepet.length; i++) {
+                    if (sepet[i].ad == meyve) {
+                        sepet[i].adet++;
+                        varmi = true;
+                        break;
+                    }
+                }
+                if (!varmi) {
+                    var yeniMeyve = {
+                        ad: meyve,
+                        adet: 1
+                    };
+                    sepet.push(yeniMeyve);
+                }
+            }
+            sepethesapla();
+        }
+        function sepethesapla() {
+            var lblmesaj = document.getElementById("lblmesaj");
+            var turtoplam = sepet.length, adettoplam = 0;
+            for (var i = 0; i < sepet.length; i++) {
+                var meyve=sepet[i];
+                adettoplam+=meyve.adet;
+            }
+            lblmesaj.innerHTML="<b>Toplam: "+turtoplam+" cins meyve ve "+adettoplam+" adet meyve bulunmaktadır</b>"
+        }
+    </script>
+</body>
+
+</html>

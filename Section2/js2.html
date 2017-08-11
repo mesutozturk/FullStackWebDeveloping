@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+    <html lang="tr">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Events</title>
+
+    </head>
+
+    <body>
+        <input type="button" value="Tıkla" onclick="tiklandi()" /><br>
+        <label id="lblsaat">saat</label>
+        <br>
+        <input type="text" id="txtsonuc" value="qwer" onmouseover="uzerinde()" onmouseout="degil()" onkeyup="basildi(this)" />
+
+        <script>
+            function basildi(txt) {
+                console.log(txt.value);
+            }
+            function tiklandi() {
+                var lbl = document.getElementById("lblsaat");
+                lbl.innerHTML = "<b>Butona Tıklandı</b>";
+
+                var txtsonuc = document.getElementById("txtsonuc");
+                txtsonuc.value = Math.random();
+            }
+            function uzerinde() {
+                console.log("üzerinde");
+            }
+            function degil() {
+                console.log("değil");
+            }
+        </script>
+    </body>
+
+    </html>

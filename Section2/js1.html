@@ -1,12 +1,79 @@
 <<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JS Giriş</title>
-</head>
-<body>
-    
-</body>
-</html> 
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Giriş</title>
+        <script>
+            var a = 5;
+            //console.log(typeof(a))
+            a = 3.14;
+            //console.log(typeof(a))
+            a = "Kamil";
+            //console.log(typeof(a))
+            a = true;
+            //console.log(typeof(a))
+            a = new Date();
+            //console.log(typeof(a))
+            a = [1, 2, 3, 6];
+            a.push(12);
+            a[2] = 9;
+            a[10] = 10;
+            a[1] = 'Kamil';
+            a[2] = false;
+            a = new Object();
+            a.ad = "Kamil";
+            a.soyad = "Fıdıl";
+            a.no = 96;
+
+            a = {
+                mesajlar: "naber",
+                urunler: [
+                    {
+                        ad: "elma",
+                        fiyat: 4.5,
+                        satistami: true
+                    }, {
+                        ad: "karpuz",
+                        fiyat: 1,
+                        satistami: true
+                    },
+                    "Yaz"
+                ],
+                uyeler: [
+                    {
+                        id: 1,
+                        kullaniciadi: "jsuser",
+                        sifre: "1234"
+                    }, {
+                        id: 2,
+                        kullaniciadi: "rootadmin",
+                        sifre: "12345",
+                        yoneticimi: true
+                    }
+                ],
+                fonk: function (a, b) {
+                    return a * b;
+                }
+            }
+            function topla(a, b) {
+                return a + b;
+            }
+
+            var carp = function (a, b) {
+                return a * b;
+            }
+
+            console.log(a.fonk(2, 5));
+            a = topla(5, 6);
+            a = carp(6, 8);
+            console.log(a);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
