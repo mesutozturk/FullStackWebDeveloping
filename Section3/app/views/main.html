@@ -8,5 +8,33 @@
         <input type="button" value="Getir" ng-click="firmaara()" class="btn btn-primary" />
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Firma Adı</th>
+              <th>Adres</th>
+              <th>Kişi Sayısı</th>
+              <th>Detay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(key,firma) in firmalar">
+              <th scope="row">{{key+1}}</th>
+              <td>{{firma.name}}</td>
+              <td>{{firma.location.formattedAddress.toString()}}</td>
+              <td>{{firma.hereNow.summary}}</td>
+              <td>
+                <a href="#" class="btn btn-success">
+                  Gör
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
