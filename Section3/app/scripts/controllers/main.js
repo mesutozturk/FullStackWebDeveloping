@@ -7,11 +7,10 @@
  * # MainCtrl
  * Controller of the firstangularApp
  */
-angular.module('firstangularApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+app.controller('MainCtrl', function ($scope, api) {
+  $scope.firmaara = function () {
+    api.searchVenue($scope.ara, function (response) {
+      console.log(response);
+    });
+  };
+});
