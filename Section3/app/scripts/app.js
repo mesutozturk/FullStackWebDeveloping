@@ -39,6 +39,33 @@ app.factory("api", function ($http) {
       }).then(function (response) {
         success(response.data);
       })
+    },
+    getVenue: function (id, success) {
+      $http({
+        url: apiUrl + 'venues/' + id,
+        method: 'GET',
+        params: {
+          client_id: clientId,
+          client_secret: clientSecret,
+          v: v
+        }
+      }).then(function (response) {
+        success(response.data);
+      })
+    },
+    getphotos:function(id,success){
+      //https://api.foursquare.com/v2/venues/VENUE_ID/photos
+      $http({
+        url: apiUrl + 'venues/' + id+"/photos",
+        method: 'GET',
+        params: {
+          client_id: clientId,
+          client_secret: clientSecret,
+          v: v
+        }
+      }).then(function (response) {
+        success(response.data);
+      })
     }
   }
 });
@@ -53,6 +80,11 @@ app.config(function ($routeProvider) {
       templateUrl: 'views/about.html',
       controller: 'AboutCtrl',
       controllerAs: 'about'
+    })
+    .when('/detay/:id', {
+      templateUrl: 'views/detay.html',
+      controller: 'DetayCtrl',
+      controllerAs: 'detay'
     })
     .otherwise({
       redirectTo: '/'

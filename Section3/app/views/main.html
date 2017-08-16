@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-sm-6">
-        <input type="text" class="form-control" ng-model="ara" />
+        <input type="text" class="form-control" ng-model="ara" ng-keyup="firmaara()"/>
       </div>
       <div class="col-sm-4">
         <input type="button" value="Getir" ng-click="firmaara()" class="btn btn-primary" />
@@ -27,7 +27,7 @@
               <td>{{firma.location.formattedAddress.toString()}}</td>
               <td>{{firma.hereNow.summary}}</td>
               <td>
-                <a href="#" class="btn btn-success">
+                <a href="#!detay/{{firma.id}}" class="btn btn-success">
                   Gör
                 </a>
               </td>
